@@ -1,0 +1,28 @@
+.box{
+	background: #19181e;
+	border-radius: 15px;
+	margin: 20px;
+	max-height: 125px;
+	padding: 15px 10px;
+	color: #fff;
+}
+.box-content{
+	display: flex;
+	justify-content: space-between;
+}
+.moneybox-title{
+	font-size: 14px;
+	font-weight: 400;
+}
+.moneybox-value{
+	margin-top: 10px;
+	font-size: 30px;
+	font-weight: 700;
+}
+.moneybox-icon{
+	width: 70px;
+	height: 70px;
+}
+.progress-bar{
+
+}

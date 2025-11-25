@@ -1,0 +1,56 @@
+.options-menu{
+	width: 0;
+	height: 100%;
+	background: #111016;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	animation: optionsIn forwards 0.3s ease;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+@keyframes optionsIn{
+	to{width: 100%;}
+}
+
+.options-icon{
+	color: whitesmoke;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+	margin-top: 10vh;
+}
+
+.options-title{
+	color: whitesmoke;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.options-button{
+	color: whitesmoke;
+	padding: 15px 30px;
+	margin: 10px;
+	background: #19181e;
+	width: 90%;
+	border-radius: 25px;
+	display: flex;
+	font-weight: 300;
+	transition: all 0.2s;
+}
+
+.options-button:hover{
+	opacity: 0.5;
+}
+
+.options-button-icon{
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
