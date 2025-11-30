@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import './moneyboxes.css'
 import MoneyBox from "../MoneyBox/MoneyBox"
 
-const MoneyBoxes = ({boxes}) => {
+const MoneyBoxes = ({boxes, toggleEditMenu}) => {
 	return <div className="money-boxes">
 		{boxes.map((el) => {
-			return <MoneyBox box={el} key={el.id}/>
+			return <MoneyBox onEdit={toggleEditMenu} box={el} key={el.id}/>
 		})}
 	</div>
 }

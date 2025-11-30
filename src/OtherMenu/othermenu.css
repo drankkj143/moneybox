@@ -1,0 +1,36 @@
+.other-menu{
+	position: absolute;
+	transform: translate(-155px, -30px);
+	opacity: 0;
+	animation: otherMenuIn forwards 0.5s ease;
+	background: #ffffff04;
+	padding: 20px;
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border-top-right-radius: 0;
+}
+
+.other-menu button{
+	background: #2e2c37;
+	width: 100%;
+	font-size: 18px;
+	padding: 10px;
+	border-radius: 10px;
+	color: whitesmoke;
+	transition: background 0.2s ease-in-out;
+}
+
+.other-menu button:nth-child(1){
+	margin-bottom: 10px;
+}
+
+.other-menu button:hover{
+	background: #2e2c37c4;
+}
+.other-menu button:nth-child(2):hover{
+	background: #74161e50;
+}
+
+@keyframes otherMenuIn{
+	to{opacity: 1;}
+}

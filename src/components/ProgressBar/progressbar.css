@@ -10,7 +10,9 @@
 	top: 0;
 	left: 0;
 	height: 100%;
+	transition: width 0.8s ease-in-out;
 }
+
 .progress-bar p{
 	position: relative;
 	text-align: center;

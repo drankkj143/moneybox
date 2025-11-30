@@ -1,0 +1,78 @@
+.app-info-menu{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 100%;
+	z-index: 2;
+	animation: infoMenuIn forwards 0.3s ease;
+	background: #111016;
+	padding: 0px 20px;
+	color: whitesmoke;
+}
+
+@keyframes infoMenuIn{
+	to{width: 100%;}
+}
+
+.info-menu-back{
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+}
+
+.info-block{
+	width: 100%;
+	border-radius: 20px;
+	background: #19181e;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+.info-block p{
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.info-block-icon{
+	width: 30px;
+	height: 30px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.info-block-content{
+	display: flex;
+	margin-left: 20px;
+}
+
+.info-block-input{
+	display: flex;
+	flex-direction: column;	
+}
+
+.info-block-input select{
+	background: transparent;
+	color: whitesmoke;
+	border-radius: 15px;
+	margin-bottom: 15px;
+}
+
+.info-block-input select:hover{
+	cursor: pointer;
+}
+
+.info-block-input select:focus{
+	background: #19181e;
+}
+
+.info-block-content a{
+	font-size: 18px;
+	color: whitesmoke;
+	padding-top: 20px;
+	width: 100%;
+	text-align: left;
+}
+

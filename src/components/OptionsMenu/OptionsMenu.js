@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import './optionsmenu.css'
 import { FaWallet, FaGear } from "react-icons/fa6"
 import { FaHome, FaShare } from "react-icons/fa"
+import AppInfoMenu from "../AppInfoMenu/AppInfoMenu"
 
 const OptionsMenu = ({toggleOptionsMenu}) => {
 	const shareData = {
@@ -9,6 +10,8 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 		text: "Создавай свои универсальные копилки в данном приложении",
 		url: window.location.href
 	}
+
+	const [isInfoMenu, setInfoMenu] = useState(false)
 
 	const onShare = async () => {
 		try{
@@ -18,6 +21,10 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 			console.log(err)
 		}
 	}
+
+	const toggleInfoMenu = () => {
+		setInfoMenu(!isInfoMenu)
+	}
 	
 	return <div className="options-menu">
 		<FaWallet className="options-icon"/>
@@ -26,7 +33,7 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 			<FaHome className="options-button-icon"/>
 			Домой
 		</button>
-		<button className="options-button">
+		<button className="options-button" onClick={toggleInfoMenu}>
 			<FaGear className="options-button-icon"/>
 			Настройки
 		</button>
@@ -34,6 +41,7 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 			<FaShare className="options-button-icon" onClick={onShare}/>
 			Поделиться
 		</button>
+		{isInfoMenu && <AppInfoMenu toggleInfoMenu={toggleInfoMenu}/>}
 	</div>
 }
 

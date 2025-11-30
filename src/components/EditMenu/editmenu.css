@@ -1,0 +1,92 @@
+.edit-menu{
+	background: #111016;
+	z-index: 2;
+	animation: editMenuIn forwards 0.3s ease;
+	position: absolute;
+	color: whitesmoke;
+}
+
+@keyframes editMenuIn{
+	to{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+
+.edit-menu-title{
+	font-size: 18px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.edit-menu-title p{
+	align-self: center;
+}
+
+.edit-menu-title .back-button{
+	transform: scale(0.6);
+}
+
+.edit-menu-box-info{
+	background: #19181e;
+	width: 87%;
+	border-radius: 25px;
+	padding: 20px 10px;
+	margin: 25px;
+}
+
+.edit-menu-box-info-title{
+	font-size: 14px;
+	color: #b5b4ba;
+}
+
+.edit-menu-box-info-value{
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+.edit-menu-box-info button{
+	color: whitesmoke;
+	background: #29282e;
+	padding: 20px 30px;
+	border-radius: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.2s;
+	width: 49%;
+}
+
+.edit-menu-box-info button:nth-child(1):hover{
+	background: #21342277;
+}
+
+.edit-menu-box-info button:nth-child(2):hover{
+	background: #3b1d1d77;
+}
+
+
+.edit-menu-box-info-buttons{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.edit-menu-progress{
+	margin: 25px;
+}
+
+.edit-menu-progress-title{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.edit-menu-progress-title b{
+	font-size: 18px;
+}
+
+.edit-menu-progress-title p{
+	color: rgba(245, 245, 245, 0.525);
+}

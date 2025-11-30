@@ -2,8 +2,8 @@ import React from "react"
 import './moneybox.css'
 import ProgressBar from "../ProgressBar/ProgressBar"
 
-const MoneyBox = ({box}) => {
-	return <div className="box">
+const MoneyBox = ({box, onEdit}) => {
+	return <div className="box" onClick={(ev) => {onEdit(ev.target, box)}}>
 		<div className="box-content">
 			<div>
 				<p className="moneybox-title">{box.title}</p>

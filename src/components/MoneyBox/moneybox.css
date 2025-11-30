@@ -5,6 +5,11 @@
 	max-height: 125px;
 	padding: 15px 10px;
 	color: #fff;
+	transition: all 0.2s;
+}
+.box:hover{
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.158);
 }
 .box-content{
 	display: flex;
@@ -22,7 +27,4 @@
 .moneybox-icon{
 	width: 70px;
 	height: 70px;
-}
-.progress-bar{
-
 }
