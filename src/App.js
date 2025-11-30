@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import './app.css'
+import './App.css'
 import Header from "./components/Header/Header";
 import { FaPlus } from "react-icons/fa";
 import MoneyBoxes from "./components/MoneyBoxes/MoneyBoxes";
