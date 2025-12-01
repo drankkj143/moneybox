@@ -1,0 +1,17 @@
+{
+  "title": "Настройки",
+  "theme": {
+	"title": "Тема",
+	"darkSelect": "Темная",
+	"lightSelect": "Светлая"
+  },
+  "language": {
+	"title": "Язык",
+	"ruSelect": "Русский",
+	"enSelect": "Английский"
+  },
+  "titles": {
+	"appSettings": "Приложение",
+	"developerInfo": "Разработчик"
+  }
+}

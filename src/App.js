@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react"
 import './App.css'
+import "./i18n"
+
 import Header from "./components/Header/Header";
 import { FaPlus } from "react-icons/fa";
 import MoneyBoxes from "./components/MoneyBoxes/MoneyBoxes";
 import AddMenu from "./components/AddMenu/AddMenu";
 import OptionsMenu from "./components/OptionsMenu/OptionsMenu";
-import EditMenu from "./components/EditMenu/EditMenu";
+import EditMenu from "./components/EditMenu/EditMenu"
+import { useTranslation } from "react-i18next"
 
 const App = () => {
 	const [boxes, setBoxes] = useState(() => {
@@ -15,8 +18,7 @@ const App = () => {
 			{id: 2, title: "ААА", currValue: 9, color: "yellow", goal: 50},
 			{id: 3, title: "Покушать", currValue: 10, color: "blue", goal: 100}
 		]
-	}
-		
+	}	
 	)
 	const [menu, setMenu] = useState(false)
 	const [optionsMenu, setOptionsMenu] = useState(false)
@@ -25,9 +27,18 @@ const App = () => {
 	const [currDiv, setCurrDiv] = useState(null)
 	const [currBox, setCurrBox] = useState(null)
 
+	const { i18n } = useTranslation('main')
+
 	useEffect(() => {
 		localStorage.setItem("allBoxes", JSON.stringify(boxes))
 	}, [boxes])
+
+	useEffect(() => {
+		const savedLang = localStorage.getItem("lang")
+		if (savedLang) {
+			i18n.changeLanguage(savedLang)
+		}
+	}, [])
 
 	const toggleAddMenu = () => {
 		setMenu(!menu)

@@ -1,0 +1,17 @@
+{
+  "title": "Settings",
+  "theme": {
+	"title": "Theme",
+	"darkSelect": "Dark",
+	"lightSelect": "Light"
+  },
+  "language": {
+	"title": "Language",
+	"ruSelect": "Russian",
+	"enSelect": "English"
+  },
+  "titles": {
+	"appSettings": "App",
+	"developerInfo": "Developer"
+  }
+}

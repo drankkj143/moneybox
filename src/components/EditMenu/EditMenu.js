@@ -2,10 +2,12 @@ import React, { useState } from "react"
 import './editmenu.css'
 import ProgressBar from "../ProgressBar/ProgressBar"
 import { IoIosArrowBack } from "react-icons/io"
-import { BsThreeDotsVertical } from "react-icons/bs";
-import OtherMenu from "../../OtherMenu/OtherMenu";
+import { BsThreeDotsVertical } from "react-icons/bs"
+import OtherMenu from "../OtherMenu/OtherMenu"
+import { useTranslation } from "react-i18next"
 
 const EditMenu = ({div, box, toggleEditMenu, onDelete, changeBalance, changeBoxTitle}) => {
+	const { t } = useTranslation('edit')
 	const [posX, posY] = [div.offsetLeft + div.offsetWidth / 2,
 						 div.offsetTop + div.offsetHeight / 2]
 
@@ -29,33 +31,33 @@ const EditMenu = ({div, box, toggleEditMenu, onDelete, changeBalance, changeBoxT
 				</div>
 			</div>
 			<div className="edit-menu-box-info">
-				<p className="edit-menu-box-info-title">Текущий баланс</p>
+				<p className="edit-menu-box-info-title">{t("currentBalance")}</p>
 				<p className="edit-menu-box-info-value">{box.currValue}</p>
 				<div className="edit-menu-box-info-buttons">
 					<button onClick={() => {
-						const input = prompt("Введите значение: ")
+						const input = prompt(t("promt.enter"))
 						if(isNaN(input)){
-							alert("Введите правильное число!")
+							alert(t("promt.alert"))
 							return
 						}
 						changeBalance('+', box.id, Number(input))
 						toggleEditMenu()
-						}}>Пополнить</button>
+						}}>{t("addBalance")}</button>
 					<button onClick={() => {
-						const input = prompt("Введите значение: ")
+						const input = prompt(t("promt.enter"))
 						if(isNaN(input)){
-							alert("Введите правильное число!")
+							alert(t("promt.alert"))
 							return
 						}
 						changeBalance('-', box.id, Number(input))
 						toggleEditMenu()
-						}}>Вывести</button>
+						}}>{t("reduceBalance")}</button>
 				</div>
 			</div>
 			<div className="edit-menu-progress">
 				<div className="edit-menu-progress-title">
-					<b>Прогресс</b>
-					<p>Цель: {box.goal}</p>
+					<b>{t("progressTitle")}</b>
+					<p>{t("goalTitle")}: {box.goal}</p>
 				</div>
 				<ProgressBar box={box}/>
 			</div>

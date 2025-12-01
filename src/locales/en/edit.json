@@ -1,0 +1,14 @@
+{
+  "currentBalance": "Current balance",
+  "addBalance": "Replenish",
+  "reduceBalance": "Bring out",
+  "progressTitle": "Progress",
+  "goalTitle": "Goal",
+  "promt": {
+    "enter": "Enter the value:",
+    "alert": "Enter the correct number!",
+    "newTitle": "Enter a new name for the piggy bank:"
+  },
+  "edit": "Edit",
+  "remove": "Delete"
+}

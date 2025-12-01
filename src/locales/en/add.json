@@ -1,0 +1,10 @@
+{
+  "title": "Create a piggy bank",
+  "inputTitle": {
+	"mainTitle": "Title",
+	"goalTitle": "Goal",
+	"openingBalance": "Initial balance",
+	"colorTitle": "Color"
+  },
+  "buttonTitle": "Save"
+}

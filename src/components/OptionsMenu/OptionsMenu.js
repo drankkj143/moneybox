@@ -3,8 +3,11 @@ import './optionsmenu.css'
 import { FaWallet, FaGear } from "react-icons/fa6"
 import { FaHome, FaShare } from "react-icons/fa"
 import AppInfoMenu from "../AppInfoMenu/AppInfoMenu"
+import { useTranslation } from "react-i18next"
 
 const OptionsMenu = ({toggleOptionsMenu}) => {
+	const { t } = useTranslation('side')
+
 	const shareData = {
 		title: "MoneyBox",
 		text: "Создавай свои универсальные копилки в данном приложении",
@@ -31,15 +34,15 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 		<p className="options-title">Moneybox</p>
 		<button className="options-button" onClick={toggleOptionsMenu}>
 			<FaHome className="options-button-icon"/>
-			Домой
+			{t("buttonHome")}
 		</button>
 		<button className="options-button" onClick={toggleInfoMenu}>
 			<FaGear className="options-button-icon"/>
-			Настройки
+			{t("buttonSettings")}
 		</button>
 		<button className="options-button">
 			<FaShare className="options-button-icon" onClick={onShare}/>
-			Поделиться
+			{t("buttonShare")}
 		</button>
 		{isInfoMenu && <AppInfoMenu toggleInfoMenu={toggleInfoMenu}/>}
 	</div>

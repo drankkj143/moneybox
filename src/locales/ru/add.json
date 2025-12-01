@@ -1,0 +1,10 @@
+{
+  "title": "Создать копилку",
+  "inputTitle": {
+	"mainTitle": "Название",
+	"goalTitle": "Цель",
+	"openingBalance": "Начальный баланс",
+	"colorTitle": "Цвет"
+  },
+  "buttonTitle": "Сохранить"
+}
