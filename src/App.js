@@ -27,7 +27,7 @@ const App = () => {
 	const [currDiv, setCurrDiv] = useState(null)
 	const [currBox, setCurrBox] = useState(null)
 
-	const [theme, setTheme] = useState("light")
+	const [theme, setTheme] = useState("dark")
 
 	const { i18n } = useTranslation('main')
 
