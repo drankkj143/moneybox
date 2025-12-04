@@ -40,8 +40,8 @@ const OptionsMenu = ({toggleOptionsMenu, changeTheme}) => {
 			<FaGear className="options-button-icon"/>
 			{t("buttonSettings")}
 		</button>
-		<button className="options-button">
-			<FaShare className="options-button-icon" onClick={onShare}/>
+		<button className="options-button" onClick={onShare}>
+			<FaShare className="options-button-icon"/>
 			{t("buttonShare")}
 		</button>
 		{isInfoMenu && <AppInfoMenu toggleInfoMenu={toggleInfoMenu} changeTheme={changeTheme}/>}
