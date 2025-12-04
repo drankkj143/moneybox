@@ -1,7 +1,7 @@
 .progress-bar{
 	width: 100%;
 	position: relative;
-	background: #201f25;
+	background: var(--color-bg-save-button);
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -16,7 +16,7 @@
 .progress-bar p{
 	position: relative;
 	text-align: center;
-	color: #fff;
+	color: var(--color-back-button);
 	font-size: 12px;
 	z-index: 1;
 }

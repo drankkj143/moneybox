@@ -1,15 +1,15 @@
 .box{
-	background: #19181e;
+	background: var(--color-bg-input);
 	border-radius: 15px;
 	margin: 20px;
 	max-height: 125px;
 	padding: 15px 10px;
-	color: #fff;
+	color: var(--color-back-button);
 	transition: all 0.2s;
 }
 .box:hover{
 	cursor: pointer;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.158);
+	box-shadow: 0 0 10px var(--moneybox-shadow-color);
 }
 .box-content{
 	display: flex;

@@ -1,9 +1,9 @@
 .edit-menu{
-	background: #111016;
+	background: var(--color-bg);
 	z-index: 2;
 	animation: editMenuIn forwards 0.3s ease;
 	position: absolute;
-	color: whitesmoke;
+	color: var(--color-back-button);
 }
 
 @keyframes editMenuIn{
@@ -30,7 +30,7 @@
 }
 
 .edit-menu-box-info{
-	background: #19181e;
+	background: var(--color-bg-input);
 	width: 87%;
 	border-radius: 25px;
 	padding: 20px 10px;
@@ -39,7 +39,7 @@
 
 .edit-menu-box-info-title{
 	font-size: 14px;
-	color: #b5b4ba;
+	opacity: 0.7;
 }
 
 .edit-menu-box-info-value{
@@ -48,8 +48,8 @@
 }
 
 .edit-menu-box-info button{
-	color: whitesmoke;
-	background: #29282e;
+	color: var(--color-back-button);
+	background: var(--color-bg-save-button);
 	padding: 20px 30px;
 	border-radius: 15px;
 	text-transform: uppercase;
@@ -88,5 +88,5 @@
 }
 
 .edit-menu-progress-title p{
-	color: rgba(245, 245, 245, 0.525);
+	opacity: 0.5;
 }

@@ -6,19 +6,19 @@ header{
 	padding: 10% 5%;
 }
 .sidebar-icon{
-	color: #fff;
+	color: var(--color-back-button);
 	transform: scale(2);
 	margin-right: 5%;
 	transition: all 0.2s;
 }
 .sidebar-icon:hover{
-	color: #ffffff76;
+	opacity: 0.5;
 }
 .search-bar{
 	background: transparent;
 	border-radius: 25px;
 	width: 100%;
-	color: #fff;
+	color: var(--color-back-button);
 	font-size: 15px;
 	padding: 10px;
 }

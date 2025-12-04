@@ -6,9 +6,9 @@
 	height: 100%;
 	z-index: 2;
 	animation: infoMenuIn forwards 0.3s ease;
-	background: #111016;
+	background: var(--color-bg);
 	padding: 0px 20px;
-	color: whitesmoke;
+	color: var(--color-back-button);
 }
 
 @keyframes infoMenuIn{
@@ -24,7 +24,7 @@
 .info-block{
 	width: 100%;
 	border-radius: 20px;
-	background: #19181e;
+	background: var(--color-bg-input);
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
@@ -55,9 +55,10 @@
 
 .info-block-input select{
 	background: transparent;
-	color: whitesmoke;
+	color: var(--color-back-button);
 	border-radius: 15px;
 	margin-bottom: 15px;
+	border: 2px solid var(--color-back-button);
 }
 
 .info-block-input select:hover{
@@ -65,12 +66,12 @@
 }
 
 .info-block-input select:focus{
-	background: #19181e;
+	background: var(--color-bg-input);
 }
 
 .info-block-content a{
 	font-size: 18px;
-	color: whitesmoke;
+	color: var(--color-back-button);
 	padding-top: 20px;
 	width: 100%;
 	text-align: left;

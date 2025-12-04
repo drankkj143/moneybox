@@ -3,20 +3,21 @@
 	transform: translate(-155px, -30px);
 	opacity: 0;
 	animation: otherMenuIn forwards 0.5s ease;
-	background: #ffffff04;
+	background: var(--other-menu-bg);
 	padding: 20px;
 	backdrop-filter: blur(10px);
 	border-radius: 20px;
 	border-top-right-radius: 0;
+	z-index: 2;
 }
 
 .other-menu button{
-	background: #2e2c37;
+	background: var(--color-bg-save-button);
 	width: 100%;
 	font-size: 18px;
 	padding: 10px;
 	border-radius: 10px;
-	color: whitesmoke;
+	color: var(--color-back-button);
 	transition: background 0.2s ease-in-out;
 }
 

@@ -6,7 +6,7 @@ import { MdLanguage, MdEmail } from "react-icons/md"
 import { FaGithub, FaTelegram } from "react-icons/fa"
 import { useTranslation } from "react-i18next"
 
-const AppInfoMenu = ({toggleInfoMenu}) => {
+const AppInfoMenu = ({toggleInfoMenu, changeTheme}) => {
   const { t, i18n } = useTranslation('settings')
 
   const [lang, setLang] = useState(() => {
@@ -14,10 +14,20 @@ const AppInfoMenu = ({toggleInfoMenu}) => {
     return saved ? saved : "ru"
   })
 
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme")
+    return savedTheme ? savedTheme : "dark"
+  })
+
   useEffect(() => {
     i18n.changeLanguage(lang)
     localStorage.setItem("lang", lang)
   }, [lang])
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme)
+    changeTheme()
+  }, [theme])
 
   return <div className="app-info-menu">
     <div className="info-menu-back">
@@ -30,9 +40,9 @@ const AppInfoMenu = ({toggleInfoMenu}) => {
         <CgColorBucket className="info-block-icon"/>
         <div className="info-block-input">
           <label htmlFor="theme-select">{t("theme.title")}</label>
-          <select id="theme-select" name="theme">
-            <option>{t("theme.darkSelect")}</option>
-            <option>{t("theme.lightSelect")}</option>
+          <select id="theme-select" value={theme} onChange={e => setTheme(e.target.value)}>
+            <option value="dark">{t("theme.darkSelect")}</option>
+            <option value="light">{t("theme.lightSelect")}</option>
           </select>
         </div>
       </div>

@@ -27,6 +27,8 @@ const App = () => {
 	const [currDiv, setCurrDiv] = useState(null)
 	const [currBox, setCurrBox] = useState(null)
 
+	const [theme, setTheme] = useState("light")
+
 	const { i18n } = useTranslation('main')
 
 	useEffect(() => {
@@ -35,9 +37,12 @@ const App = () => {
 
 	useEffect(() => {
 		const savedLang = localStorage.getItem("lang")
+		const savedTheme = localStorage.getItem("theme")
 		if (savedLang) {
 			i18n.changeLanguage(savedLang)
 		}
+		if(savedTheme)
+			setTheme(savedTheme)
 	}, [])
 
 	const toggleAddMenu = () => {
@@ -81,12 +86,16 @@ const App = () => {
 		)
 	}
 
-	return <div className="app">
+	const changeTheme = () => {
+		setTheme(localStorage.getItem("theme"))
+	}
+
+	return <div className={`app ${theme}`}>
 		<Header toggleOptionsMenu={toggleOptionsMenu}/>
 		<MoneyBoxes boxes={boxes} toggleEditMenu={toggleEditMenu}/>
 		<FaPlus className="add-button" onClick={toggleAddMenu}/>
 		{menu && <AddMenu toggleMenu={toggleAddMenu} onAdd={onAdd}/>}
-		{optionsMenu && <OptionsMenu toggleOptionsMenu={toggleOptionsMenu}/>}
+		{optionsMenu && <OptionsMenu toggleOptionsMenu={toggleOptionsMenu} changeTheme={changeTheme}/>}
 		{isEditMenu && <EditMenu div={currDiv} box={currBox}
 		toggleEditMenu={toggleEditMenu} changeBalance={changeBalance}
 		onDelete={deleteBox} changeBoxTitle={changeBoxTitle}/>}

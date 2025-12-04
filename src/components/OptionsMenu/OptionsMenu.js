@@ -5,7 +5,7 @@ import { FaHome, FaShare } from "react-icons/fa"
 import AppInfoMenu from "../AppInfoMenu/AppInfoMenu"
 import { useTranslation } from "react-i18next"
 
-const OptionsMenu = ({toggleOptionsMenu}) => {
+const OptionsMenu = ({toggleOptionsMenu, changeTheme}) => {
 	const { t } = useTranslation('side')
 
 	const shareData = {
@@ -44,7 +44,7 @@ const OptionsMenu = ({toggleOptionsMenu}) => {
 			<FaShare className="options-button-icon" onClick={onShare}/>
 			{t("buttonShare")}
 		</button>
-		{isInfoMenu && <AppInfoMenu toggleInfoMenu={toggleInfoMenu}/>}
+		{isInfoMenu && <AppInfoMenu toggleInfoMenu={toggleInfoMenu} changeTheme={changeTheme}/>}
 	</div>
 }
 

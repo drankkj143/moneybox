@@ -1,7 +1,7 @@
 .options-menu{
 	width: 0;
 	height: 100%;
-	background: #111016;
+	background: var(--color-bg);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -17,7 +17,7 @@
 }
 
 .options-icon{
-	color: whitesmoke;
+	color: var(--color-back-button);
 	width: 80px;
 	height: 80px;
 	margin-bottom: 20px;
@@ -25,7 +25,7 @@
 }
 
 .options-title{
-	color: whitesmoke;
+	color: var(--color-back-button);
 	font-size: 20px;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -34,10 +34,10 @@
 }
 
 .options-button{
-	color: whitesmoke;
+	color: var(--color-back-button);
 	padding: 15px 30px;
 	margin: 10px;
-	background: #19181e;
+	background: var(--color-bg-input);
 	width: 90%;
 	border-radius: 25px;
 	display: flex;
