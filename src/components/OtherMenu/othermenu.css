@@ -1,6 +1,7 @@
 .other-menu{
 	position: absolute;
-	transform: translate(-155px, -30px);
+	top: 70px;
+	right: 35px;
 	opacity: 0;
 	animation: otherMenuIn forwards 0.5s ease;
 	background: var(--other-menu-bg);
@@ -9,6 +10,7 @@
 	border-radius: 20px;
 	border-top-right-radius: 0;
 	z-index: 2;
+	width: 200px;
 }
 
 .other-menu button{
